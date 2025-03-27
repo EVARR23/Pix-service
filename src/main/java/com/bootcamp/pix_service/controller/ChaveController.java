@@ -22,7 +22,7 @@ public class ChaveController {
         return ResponseEntity.status(CREATED).body(chaveService.criarChave(chaveRequestDTO));
     }
 
-
+    @GetMapping("/chaves/{chave}")
     public  ResponseEntity<ChaveResponseDTO> buscarChaves(@PathVariable String chave){
         return ResponseEntity.status(CREATED).body(chaveService.buscarChave(chave));
     }
